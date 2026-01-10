@@ -1,0 +1,11 @@
+MirageVD.app/*
+MirageVD.pkg
+*.dmg
+*.pkg
+.DS_Store
+build/
+DerivedData/
+*.xcuserstate
+*.xcworkspace/xcuserdata/
+release_notes.md
+dmg_temp/

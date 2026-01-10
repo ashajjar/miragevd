@@ -1,0 +1,48 @@
+name: Upload DMG to S3
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'MirageVD-*.dmg'  # Only trigger when the DMG file changes
+  workflow_dispatch:  # Allow manual triggering as well
+
+permissions:
+  contents: read
+
+jobs:
+  upload:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: us-east-1
+
+      - name: Extract Marketing Version
+        id: version
+        run: |
+          # Extract MARKETING_VERSION from the Release configuration
+          # Use xcodebuild (most reliable) or fallback to parsing project.pbxproj
+          MARKETING_VERSION=$(xcodebuild -project VirtualDisplay.xcodeproj -scheme VirtualDisplay -configuration Release -showBuildSettings 2>/dev/null | grep "MARKETING_VERSION" | head -1 | sed 's/.*MARKETING_VERSION = //' | tr -d ' ')
+          if [ -z "$MARKETING_VERSION" ]; then
+            # Fallback: parse project.pbxproj
+            MARKETING_VERSION=$(grep -o 'MARKETING_VERSION = [^;]*' VirtualDisplay.xcodeproj/project.pbxproj | head -1 | sed 's/MARKETING_VERSION = //' | tr -d ' ')
+          fi
+          if [ -z "$MARKETING_VERSION" ]; then
+            echo "Error: Could not extract MARKETING_VERSION"
+            exit 1
+          fi
+          echo "version=$MARKETING_VERSION" >> $GITHUB_OUTPUT
+          echo "Marketing version: $MARKETING_VERSION"
+
+      - name: Upload DMG to S3
+        run: |
+          aws s3 cp MirageVD-${{ steps.version.outputs.version }}.dmg s3://${{ secrets.S3_BUCKET }}/releases/MirageVD-${{ steps.version.outputs.version }}.dmg
+          echo "DMG file uploaded to S3 successfully as MirageVD-${{ steps.version.outputs.version }}.dmg"
