@@ -14,7 +14,7 @@ MirageVD is a macOS application that creates virtual displays for screen sharing
 
 ## System Requirements
 
-- macOS 12.3 or later
+- macOS 10.5 or later
 - Screen recording permissions
 
 ## Installation
