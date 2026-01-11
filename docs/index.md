@@ -1,7 +1,3 @@
----
-layout: default
----
-
 # MirageVD
 
 MirageVD is a lightweight virtual display solution for macOS that allows you to create an additional screen sharing zone without needing physical hardware.
