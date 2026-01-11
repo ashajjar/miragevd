@@ -73,8 +73,6 @@ Releases are automated through GitHub Actions. To create a new release:
    ```
 3. GitHub Actions will automatically build, sign, notarize, and create a release
 
-See [RELEASE_WORKFLOW.md](RELEASE_WORKFLOW.md) for detailed release workflow documentation.
-
 ## License
 
 Copyright © Ahmad Hajjar
