@@ -1,7 +1,5 @@
 ---
 layout: default
-title: MirageVD
-description: Lightweight virtual display solution for macOS
 ---
 
 # MirageVD

@@ -1,6 +1,7 @@
 # MirageVD
 
-[![Build and Release](https://github.com/ashajjar/miragevd/actions/workflows/build-and-release.yml/badge.svg)](https://github.com/ashajjar/miragevd/actions/workflows/build-and-release.yml) [![Website](https://img.shields.io/badge/Website-miragevd.com-violet?logo=google-chrome&logoColor=white)](https://miragevd.com/)
+[![Build and Release](https://github.com/ashajjar/miragevd/actions/workflows/build-and-release.yml/badge.svg)](https://github.com/ashajjar/miragevd/actions/workflows/build-and-release.yml) [![Website](https://img.shields.io/badge/Website-miragevd.com-violet?logo=google-chrome&logoColor=white)](https://miragevd.com/)  [![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-live-brightgreen?logo=github&logoColor=white)](https://ashajjar.github.io/miragevd/)
+
 
 MirageVD is a macOS application that creates virtual displays for screen sharing and recording purposes.
 
