@@ -120,19 +120,5 @@ For feature requests or support contact me here [contact@ahmadhajjar.me](mailto:
 
 ---
 
-## About
-
-
-
-### Technical Details
-
-- **Application Category**: Business Application
-- **Operating System**: macOS
-- **Software Version**: 1.9.1
-- **Security**: Notarized by Apple
-- **Payment**: Secure checkout via Paddle
-
----
-
 *Last updated: 2024*
 
