@@ -7,7 +7,9 @@ MirageVD is a lightweight virtual display solution for macOS that allows you to 
 Create a region, and share it in Teams, Zoom and other meeting apps.  
 Simpler than heavy streaming software, and more flexible than Window sharing.
 
-![MirageVD Icon](assets/mirage_icon_1024.png)
+<div style="text-align: center;">
+  <img src="./assets/mirage_icon_1024.png" alt="MirageVD Icon" width="256" height="256">
+</div>
 
 ---
 
@@ -22,26 +24,32 @@ Simpler than heavy streaming software, and more flexible than Window sharing.
 ### 1. Select a region
 Draw a rectangle anywhere on your screen.
 
-<video width="100%" controls>
-  <source src="assets/1-select.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
+<div style="display: flex; justify-content: center;">
+  <video width="60%" controls>
+    <source src="./assets/1-select.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</div>
 
 ### 2. Capture the selected region
 MirageVD creates a window with the selected region.
 
-<video width="100%" controls>
-  <source src="assets/2-create.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
+<div style="display: flex; justify-content: center;">
+  <video width="60%" controls>
+    <source src="./assets/2-create.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</div>
 
 ### 3. Share the captured region
 Choose MirageVD display and present safely.
 
-<video width="100%" controls>
-  <source src="assets/3-share.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
+<div style="display: flex; justify-content: center;">
+  <video width="60%" controls>
+    <source src="./assets/3-share.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</div>
 
 ---
 
